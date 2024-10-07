@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { router, Slot } from "expo-router";
 import { useSession } from "@/ctx";
-import { Spinner, View } from "tamagui";
+import { Spinner, View, H4, Text, Separator, H2 } from "tamagui";
+import { MapPin } from "@tamagui/lucide-icons";
 import TabsMenuFooter from "@/components/TabsMenuFooter";
 import HeaderToolbar from "@/components/HeaderToolbar";
 import globalStyles from "@/styles/globalStyles";
@@ -78,6 +79,41 @@ export default function AppLayout() {
       <View style={globalStyles.container} alignItems="center">
         <Spinner size="large" color="$blue10" />
       </View>
+    );
+  }
+
+  if (!location) {
+    return (
+      <>
+        <HeaderToolbar />
+        <View
+          style={{
+            flex: 1,
+            justifyContent: "flex-start",
+            paddingHorizontal: 20,
+          }}
+        >
+          <H2 paddingVertical="$4">Use your location</H2>
+          <Separator marginBottom="$2" />
+          <View alignItems="center" paddingVertical="$6" marginBottom="$6">
+            <MapPin size="50" color="$red10" />
+            <Text marginTop="$2" color="$gray10">
+              Please enable location services in your device settings.
+            </Text>
+          </View>
+          <H4>Foreground Tracking</H4>
+          <Text>
+            24 HR CAR UNLOCK uses foreground location tracking to provide you
+            with real-time updates about jobs in your area!
+          </Text>
+          <Separator marginVertical="$4" />
+          <H4>Background Tracking</H4>
+          <Text>
+            24 HR CAR UNLOCK uses background location tracking to provide you
+            with real-time updates about jobs in your area!
+          </Text>
+        </View>
+      </>
     );
   }
 
