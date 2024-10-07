@@ -93,24 +93,29 @@ export default function AppLayout() {
             paddingHorizontal: 20,
           }}
         >
-          <H2 paddingVertical="$4">Use your location</H2>
           <Separator marginBottom="$2" />
-          <View alignItems="center" paddingVertical="$6" marginBottom="$6">
-            <MapPin size="50" color="$red10" />
-            <Text marginTop="$2" color="$gray10">
+          <View alignItems="center" paddingVertical="$4" marginBottom="$4">
+            <MapPin size="$5" color="$red9" marginBottom="$4" />
+            <H2>Use your location</H2>
+            <Text marginTop="$2" color="$red9">
               Please enable location services in your device settings.
             </Text>
           </View>
-          <H4>Foreground Tracking</H4>
-          <Text>
-            24 HR CAR UNLOCK uses foreground location tracking to provide you
-            with real-time updates about jobs in your area!
+
+          <Separator marginBottom="$4" />
+          <Text
+            color="$gray10"
+            style={{ textAlign: "center", letterSpacing: "0.1px" }}
+          >
+            24 HR CAR UNLOCK collects location data to provide you with
+            real-time updates about nearby jobs even when the app is closed or
+            not in use.
           </Text>
-          <Separator marginVertical="$4" />
-          <H4>Background Tracking</H4>
-          <Text>
-            24 HR CAR UNLOCK uses background location tracking to provide you
-            with real-time updates about jobs in your area!
+          <Text
+            marginTop="$4"
+            style={{ textAlign: "center", letterSpacing: "0.1px" }}
+          >
+            We do not share your location data with third parties.
           </Text>
         </View>
       </>
