@@ -103,18 +103,12 @@ export default function AppLayout() {
           </View>
 
           <Separator marginBottom="$4" />
-          <Text
-            color="$gray10"
-            style={{ textAlign: "center", letterSpacing: "0.1px" }}
-          >
+          <Text color="$gray10" style={{ textAlign: "center" }}>
             24 HR CAR UNLOCK collects location data to provide you with
             real-time updates about nearby jobs even when the app is closed or
             not in use.
           </Text>
-          <Text
-            marginTop="$4"
-            style={{ textAlign: "center", letterSpacing: "0.1px" }}
-          >
+          <Text marginTop="$4" style={{ textAlign: "center" }}>
             We do not share your location data with third parties.
           </Text>
         </View>
